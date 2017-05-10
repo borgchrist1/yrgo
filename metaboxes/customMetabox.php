@@ -24,7 +24,7 @@ function show_your_fields_meta_box() {
 <div class="add" ><a>Add Fields</a></div>
 <div id="type" >
     <select class="test" name="">
-      <option value="Sub-Header">Sub Header</option>
+      <option value="subHeader">Sub Header</option>
       <option value="textBox">Textarea</option>
     </select>
 </div>
@@ -42,7 +42,7 @@ let customFields = {
 </p>`,
 
  subHeader : `<p>
-  <label for="your_fields[text${subHeaderKey}]">Sub-Header</label>
+  <label for="your_fields[text${subHeaderKey}]">Input Text</label>
   <br>
   <input type="text" name="your_fields[text${subHeaderKey}]" id="your_fields[text${subHeaderKey}]" class="regular-text" value="">
   </p>`
