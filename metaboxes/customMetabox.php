@@ -18,11 +18,7 @@ function show_your_fields_meta_box() {
   <input type="hidden" name="your_meta_box_nonce" value="<?php echo wp_create_nonce( basename(__FILE__) ); ?>">
 
   <span class="fields">
-  <p>
-    <label for="your_fields[test]">Input Text</label>
-    <br>
-    <input class="field" type="text" name="your_fields[text]" id="your_fields[text]" value="">
-  </p>
+  
 </span>
 
 <div class="add"><a>Add Fields</a></div>
@@ -30,12 +26,12 @@ function show_your_fields_meta_box() {
 <script>
 
 let fields = document.querySelectorAll('.field');
+let key = 0;
 
   function appendChild (){
     let addField = document.querySelector('.fields');
-
-    console.log(fields);
-    let key = fields.lenght;
+    //let key = fields.lenght;
+    console.log(key);
 
     let subHeader = (`<p>
       <label for="your_fields[text${key}]">Input Text</label>
@@ -49,6 +45,7 @@ let fields = document.querySelectorAll('.field');
   let addClicked = document.querySelector('.add');
 
   addClicked.addEventListener('click', (event) => {
+      key++;
       appendChild();
   });
 </script>

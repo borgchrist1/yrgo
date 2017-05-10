@@ -9,9 +9,9 @@ if ( $your_loop->have_posts() ) : while ( $your_loop->have_posts() ) : $your_loo
 $meta = get_post_meta( $post->ID, 'your_fields', true ); ?>
 
 <h1>Text Input</h1>
-<?php echo $meta['text']; ?>
-<h1>Text Input2</h1>
 <?php echo $meta['text1']; ?>
+<h1>Text Input2</h1>
+<?php echo $meta['text2']; ?>
 
 
 <?php endwhile; endif; wp_reset_postdata(); ?>
