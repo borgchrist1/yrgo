@@ -18,35 +18,53 @@ function show_your_fields_meta_box() {
   <input type="hidden" name="your_meta_box_nonce" value="<?php echo wp_create_nonce( basename(__FILE__) ); ?>">
 
   <span class="fields">
-  
+
 </span>
 
-<div class="add"><a>Add Fields</a></div>
+<div class="add" ><a>Add Fields</a></div>
+<div id="type" >
+    <select class="test" name="">
+      <option value="subHeader">Sub Header</option>
+      <option value="textBox">Textarea</option>
+    </select>
+</div>
 
 <script>
 
 let fields = document.querySelectorAll('.field');
-let key = 0;
+let subHeaderKey = 0;
 
-  function appendChild (){
+let customFields = {
+ textBox : `<p>
+	<label for="your_fields[textarea${subHeaderKey}]">Textarea</label>
+	<br>
+	<textarea name="your_fields[textarea${subHeaderKey}]" id="your_fields[textarea${subHeaderKey}]" rows="5" cols="30" style="width:500px;"><?php echo $meta['textarea']; ?></textarea>
+</p>`,
+
+ subHeader : `<p>
+  <label for="your_fields[text${subHeaderKey}]">Input Text</label>
+  <br>
+  <input type="text" name="your_fields[text${subHeaderKey}]" id="your_fields[text${subHeaderKey}]" class="regular-text" value="">
+  </p>`
+};
+
+  function appendChild (element){
     let addField = document.querySelector('.fields');
     //let key = fields.lenght;
-    console.log(key);
+    console.log(subHeaderKey);
 
-    let subHeader = (`<p>
-      <label for="your_fields[text${key}]">Input Text</label>
-      <br>
-      <input type="text" name="your_fields[text${key}]" id="your_fields[text${key}]" class="regular-text" value="">
-      </p>`);
+
     console.log('hello');
-    addField.insertAdjacentHTML( 'beforeend', subHeader  );
+    addField.insertAdjacentHTML( 'beforeend', element  );
   }
 
   let addClicked = document.querySelector('.add');
 
   addClicked.addEventListener('click', (event) => {
-      key++;
-      appendChild();
+      subHeaderKey++;
+      let optionValue = document.querySelector('.test').value;
+      //console.log(customFields[optionValue]);
+      appendChild(customFields[optionValue]);
   });
 </script>
   <?php }
