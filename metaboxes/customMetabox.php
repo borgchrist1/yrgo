@@ -18,7 +18,7 @@ function show_your_fields_meta_box() {
   <input type="hidden" name="your_meta_box_nonce" value="<?php echo wp_create_nonce( basename(__FILE__) ); ?>">
 
   <span class="fields">
-
+    
 </span>
 
 <div class="add" ><a>Add Fields</a></div>
@@ -38,7 +38,7 @@ let customFields = {
  textBox : `<p>
 	<label for="your_fields[textarea${subHeaderKey}]">Textarea</label>
 	<br>
-	<textarea name="your_fields[textarea${subHeaderKey}]" id="your_fields[textarea${subHeaderKey}]" rows="5" cols="30" style="width:500px;"><?php echo $meta['textarea']; ?></textarea>
+	<textarea name="your_fields[textarea${subHeaderKey}]" id="your_fields[textarea${subHeaderKey}]" rows="5" cols="30" style="width:500px;"><?php if(isset($meta['textarea'])) echo $meta['textarea']; ?></textarea>
 </p>`,
 
  subHeader : `<p>

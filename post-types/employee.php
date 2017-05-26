@@ -15,5 +15,6 @@ add_action('init', function () {
         'menu_icon' => 'dashicons-groups',
         'menu_position' => 20,
         'public' => true,
+        
     ]);
 });

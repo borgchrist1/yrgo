@@ -9,24 +9,42 @@
     <?php wp_head(); ?>
 </head>
 <body>
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded mb-3" style="background-color: #e42407;">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button><!-- /navbar-toggler -->
-
-        <a class="navbar-brand" href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <?php foreach (get_pages() as $page): ?>
-                    <li class="nav-item <?php if (is_page($page)) { echo 'active'; } ?>">
-                        <a class="nav-link" href="<?php echo get_permalink($page); ?>">
-                            <?php echo $page->post_title; ?>
-                        </a><!-- /nav-link -->
-                    </li><!-- /nav-item -->
-                <?php endforeach; ?>
-            </ul><!-- /navbar -->
-        </div><!-- /collapse -->
-    </nav><!-- /navbar -->
-
     <div class="container">
+
+      <div data-row="1" class="sub-menu">
+      <div class="row">
+          <div class="col-xs-12 col-md-9">
+            <div class="menu-list">
+          <ul>
+            <li><h2>Test</h2></li>
+            <li><h2>Test</h2></li>
+            <li><h2>Test</h2></li>
+            <li><h2>Test</h2></li>
+          </ul>
+        </div>
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class="menu-content">
+            <ul>
+              <li><h4>test</h4></li>
+              <li><h4>test</h4></li>
+              <li><h4>test</h4></li>
+            </ul>
+          </div>
+        </div>
+
+          </div>
+        </div>
+        <div class="container-fluid full">
+          <nav>
+            <div class="logo">
+              <a href="<?php echo site_url(); ?>"><img src="logo_vit2x.png" alt=""></a>
+            </div>
+            <div class="wrapper">
+              <?php $id = 0;
+              foreach (get_pages() as $page):
+              $id++; ?>
+            <p id="<?php echo $id; ?>" class="parent"><?php echo $page->post_title; ?></p>
+          <?php endforeach; ?>
+          </div>
+          </nav>
