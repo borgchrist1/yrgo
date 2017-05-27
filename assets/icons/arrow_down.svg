@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="53px" height="70px" viewBox="0 0 53 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44 (41411) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="YRGO" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="landing_hero" transform="translate(-614.000000, -652.000000)" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="Group-3" transform="translate(614.000000, 652.000000)">
+                <path d="M24,3 L24,48.721986 C24,50.1026978 25.1192881,51.221986 26.5,51.221986 C27.8807119,51.221986 29,50.1026978 29,48.721986 L29,3 C29,1.61928813 27.8807119,0.5 26.5,0.5 C25.1192881,0.5 24,1.61928813 24,3 Z" id="Path-3"></path>
+                <path d="M4.78912188,41.2538491 C3.82474938,40.2657444 2.24195385,40.2465056 1.25384912,41.2108781 C0.265744389,42.1752506 0.246505618,43.7580462 1.21087812,44.7461509 L24.7108781,68.824462 C25.684663,69.8222108 27.2864114,69.8306405 28.270644,68.8431964 L52.270644,44.7648852 C53.2453632,43.7869856 53.2427849,42.2040752 52.2648852,41.229356 C51.2869856,40.2546368 49.7040752,40.2572151 48.729356,41.2351148 L26.5187361,63.5182071 L4.78912188,41.2538491 Z" id="Path-4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

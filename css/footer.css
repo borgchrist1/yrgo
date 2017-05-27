@@ -1,0 +1,201 @@
+@font-face {
+    font-family: 'GravurRegular';
+    src: url('/themes/yrgo/assets/fonts/gravur-condensed-regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GravurBold';
+    src: url('/themes/yrgo/assets/fonts/gravur-condensed-bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GravurLight';
+    src: url('/themes/yrgo/assets/fonts/gravur-condensed-light.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GravurThin';
+    src: url('/themes/yrgo/assets/fonts/gravur-condensed-thin.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GravurBlack';
+    src: url('/themes/yrgo/assets/fonts/gravur-condensed-black.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+footer {
+    padding-top: 100px;
+}
+
+footer p {
+  color: white;
+}
+
+.footer_background {
+    background-color: #001a52;
+}
+
+.kontakt p {
+    font-family: GravurLight;
+    font-size: 1.7rem;
+    text-align: center;
+    padding-top: 33px;
+}
+
+@media (min-width: 768px) {
+    .kontakt p {
+        font-size: 1.1875rem;
+        letter-spacing: 0.3px;
+        line-height: 1.6;
+        text-align: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .kontakt p {
+        font-size: 2.1rem;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .kontakt p {
+        font-size: 2.4375rem;
+    }
+}
+
+.address p {
+    font-family: GravurThin;
+    font-size: 0.8rem;
+    letter-spacing: 0.2px;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 576px) {
+    .address p {
+        text-align: left;
+    }
+}
+
+@media (min-width: 768px) {
+    .address p {
+        letter-spacing: 0.3px;
+        line-height: 1.6;
+    }
+}
+
+@media (min-width: 992px) {
+    .address p {
+        font-family: GravurLight;
+        font-size: 1.1875rem;
+        text-align: left;
+        max-width: 480px;
+    }
+}
+
+.zipcode p {
+    font-family: GravurThin;
+    font-size: 0.7rem;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .zipcode p {
+        font-size: 0.7rem;
+        letter-spacing: 0.3px;
+    }
+}
+
+@media (min-width: 992px) {
+    .zipcode p {
+        font-family: GravurLight;
+        text-align: left;
+        max-width: 480px;
+    }
+}
+
+.social_media p {
+    font-family: GravurLight;
+    font-size: 1.7rem;
+    text-align: center;
+    padding-top: 33px;
+}
+
+@media (min-width: 768px) {
+    .social_media p {
+        font-size: 1.1875rem;
+        letter-spacing: 0.3px;
+        line-height: 1.6;
+        text-align: right;
+    }
+}
+
+@media (min-width: 992px) {
+    .social_media p {
+        font-size: 2.1rem;
+        text-align: right;
+        max-width: 480px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .social_media p {
+        font-size: 2.4375rem;
+    }
+}
+
+.social_media_icons {
+    background-color: #001a52;
+    line-height: 0;
+}
+
+@media (min-width: 576px) {
+    .social_media_icons {
+        margin-top: 15px;
+    }
+}
+
+.social_media img {
+    background-color: white;
+}
+
+.facebook {
+    height: 60px;
+    width: 60px;
+}
+
+.facebook img {
+    height: 45px;
+    width: 45px;
+}
+
+.instagram {
+    height: 60px;
+    width: 60px;
+    margin-right: 10px;
+}
+
+@media (min-width: 576px) {
+    .instagram {}
+}
+
+@media (min-width: 768px) {
+    .instagram {
+        margin-right: -14px;
+    }
+}
+
+.instagram img {
+    height: 60px;
+    width: 60px;
+}
