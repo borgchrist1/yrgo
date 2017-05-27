@@ -18,8 +18,58 @@ function show_your_fields_meta_box() {
   <input type="hidden" name="your_meta_box_nonce" value="<?php echo wp_create_nonce( basename(__FILE__) ); ?>">
 
   <span class="fields">
-    
-</span>
+    <label for="Kurs titel">Kurs Titel</label>
+    <input type="text" name="Kurs titel" value=""><br>
+    <label for="Utbildningstyp">Utbildningstyp och poäng</label>
+    <input type="text" name="Utbildningstyp" value="">
+    <p>
+	<label for="your_fields[image]">Image Upload</label><br>
+	<input type="text" name="your_fields[image]" id="your_fields[image]" class="meta-image regular-text" value="<?php if(isset($meta['image'])) echo $meta['image']; ?>">
+	<input type="button" class="button image-upload" value="Browse">
+</p>
+<div class="image-preview"><img src="<?php if(isset($meta['image'])) echo $meta['image']; ?>" style="max-width: 250px;"></div>
+  <p>
+<label for="your_fields[image2]">Image Upload</label><br>
+<input type="text" name="your_fields[image2]" id="your_fields[image2]" class="meta-image regular-text" value="<?php if(isset($meta['image2'])) echo $meta['image2']; ?>">
+<input type="button" class="button image-upload" value="Browse">
+</p>
+<div class="image-preview"><img src="<?php if(isset($meta['image2'])) echo $meta['image']; ?>" style="max-width: 250px;"></div>
+    <script>
+jQuery(document).ready(function ($) {
+
+	// Instantiates the variable that holds the media library frame.
+	var meta_image_frame;
+	// Runs when the image button is clicked.
+	$('.image-upload').click(function (e) {
+		e.preventDefault();
+		var meta_image = $(this).parent().children('.meta-image');
+
+		// If the frame already exists, re-open it.
+		if (meta_image_frame) {
+			meta_image_frame.open();
+			return;
+		}
+		// Sets up the media library frame
+		meta_image_frame = wp.media.frames.meta_image_frame = wp.media({
+			title: meta_image.title,
+			button: {
+				text: meta_image.button
+			}
+		});
+		// Runs when an image is selected.
+		meta_image_frame.on('select', function () {
+			// Grabs the attachment selection and creates a JSON representation of the model.
+			var media_attachment = meta_image_frame.state().get('selection').first().toJSON();
+			// Sends the attachment URL to our custom image input field.
+			meta_image.val(media_attachment.url);
+		});
+		// Opens the media library frame.
+		meta_image_frame.open();
+	});
+});
+</script>
+
+  </span>
 
 <div class="add" ><a>Add Fields</a></div>
 <div id="type" >

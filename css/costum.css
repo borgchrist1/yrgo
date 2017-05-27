@@ -227,11 +227,7 @@ font-size: 20px;
     padding: 5px 0px 10px 25px;
   }
 
-  footer {
-    height:250px;
-    background: #f52a3b;
-    margin-top: 15px;
-  }
+  
 
   .menu-link {
     display: flex;

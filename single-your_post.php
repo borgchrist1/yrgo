@@ -1,3 +1,4 @@
+<?php get_header(); ?>
 <div data-img="<?php echo $var; ?>" class="col-xs-12 course-jumbo">
   <span class="jumbo-top"></span>
   <div class="jumbo-content">
@@ -78,3 +79,5 @@
         </dl>
     </div> <!-- end row -->
   </div>
+
+<?php get_footer(); ?>
