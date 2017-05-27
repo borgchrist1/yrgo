@@ -20,7 +20,12 @@ add_action('after_setup_theme', function () {
     wp_deregister_script('jquery');
 
     wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css');
+<<<<<<< HEAD
     wp_enqueue_style( 'costum', get_template_directory_uri() . '/css/costum.css',false,'','all');
+=======
+    wp_enqueue_style( 'costum', get_template_directory_uri() . '/css/costum.css',false,'1.1','all');
+    wp_enqueue_style( 'footer', get_template_directory_uri() . '/css/footer.css',false,'1.1','all');
+>>>>>>> 64d28f448edcac6cca743659bc1125f87fe1c1e1
 
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.1.1.slim.min.js', '', '', true);
     wp_register_script('tether', 'https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', '', '', true);

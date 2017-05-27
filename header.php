@@ -35,15 +35,15 @@
 
       </div>
     </div>
-    <div class="container-fluid full">
-      <nav>
-        <div class="logo">
-          <a href="<?php echo site_url(); ?>"><img src="logo_vit2x.png" alt=""></a>
-        </div>
-        <div class="wrapper">
-          <?php $id = 0;
-          foreach (get_pages() as $page):
-            $id++; ?>
+        <div class="container-fluid full">
+          <nav>
+            <div class="logo">
+              <a href="<?php echo site_url(); ?>"><img src="/themes/yrgo/assets/logos/logo_vit2x.png" alt=""></a>
+            </div>
+            <div class="wrapper">
+              <?php $id = 0;
+              foreach (get_pages() as $page):
+              $id++; ?>
             <p id="<?php echo $id; ?>" class="parent"><?php echo $page->post_title; ?></p>
           <?php endforeach; ?>
         </div>
