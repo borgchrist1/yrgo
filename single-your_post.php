@@ -83,16 +83,21 @@
     </div> <!-- end row -->
     <div class="row">
       <div class="col-xs-12 col-md-7"> <!-- Left column-->
-        <h2></h2>
-        <div class="menu" data-row="<?php echo $id; ?>">
-          <div class="menu-link">
-            <p class="arrow" data-row="<?php echo $id; ?>">></p>
-            <h4 id="<?php echo $id; ?>"></h4>
-          </div>
-          <div class="x-menu hidden" data-row="<?php echo $id; ?>">
-            <p></p>
-          </div>
-        </div>
+        <h2><?php the_field('eud_apply'); ?></h2>
+       <?php if( have_rows('eud_applyInfo') ):
+       while ( have_rows('eud_applyInfo') ) : the_row();
+         $id++;?>
+ <div class="menu" data-row="<?php echo $id; ?>">
+   <div class="menu-link">
+     <p class="arrow" data-row="<?php echo $id; ?>">></p>
+     <h4 id="<?php echo $id; ?>"><?php the_sub_field('eud_applyTitel'); ?></h4>
+   </div>
+   <div class="x-menu hidden" data-row="<?php echo $id; ?>">
+     <p><?php the_sub_field('eud_applyText'); ?></p>
+   </div>
+ </div>
+<?php endwhile;
+     endif; ?>
       </div>
       <div class="col-xs-12 col-md-5 contact">
         <h2></h2>

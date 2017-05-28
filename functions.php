@@ -3,7 +3,8 @@
 declare(strict_types=1);
 
 // Register employee custom post type.
-require get_template_directory().'/post-types/employee.php';
+ require get_template_directory().'/post-types/employee.php';
+require get_template_directory().'/post-types/contact.php';
 // Register location taxonomy for the employee custom post type.
 require get_template_directory().'/post-types/customPage.php';
 require get_template_directory().'/metaboxes/customMetabox.php';
