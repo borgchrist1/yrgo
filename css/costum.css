@@ -144,8 +144,8 @@ font-size: 20px;
 
 
   .course-jumbo {
-    background: url('background_program.png');
-    background-size: cover;
+    /*background: url('background_program.png');*/
+    /*background-size: cover;*/
     color: white;
     height: 396px;
     /*padding-left: 30px;*/
@@ -227,7 +227,7 @@ font-size: 20px;
     padding: 5px 0px 10px 25px;
   }
 
-  
+
 
   .menu-link {
     display: flex;
