@@ -20,9 +20,13 @@
       <p><?php the_field('eud_aboutText'); ?></p>
     </div>
     <div class="col-xs-12 col-md-5 contact">
-      <h2></h2>
+      <h2><?php the_field('eud_fact'); ?></h2>
       <dl class="dl-horizontal info-list">
-        <dt></dt>
+        <?php if( have_rows('eud_aboutContent') ):
+              while ( have_rows('eud_aboutContent') ) : the_row(); ?>
+        <dt><?php the_sub_field('eud_aboutContent'); ?></dt>
+        <?php endwhile;
+              endif; ?>
       </dl>
       <div class="apply">
         <div class="button">
@@ -33,36 +37,48 @@
   </div> <!-- End row -->
   <div class="row">
     <div class="col-xs-12 col-md-7"> <!-- Left column-->
-      <h2></h2>
+      <h2><?php the_field('eud_courses'); ?></h2>
+      <?php $id = 0;
+            if( have_rows('eud_courseInfo') ):
+            while ( have_rows('eud_courseInfo') ) : the_row();
+              $id++;?>
       <div class="menu" data-row="<?php echo $id; ?>">
         <div class="menu-link">
           <p class="arrow" data-row="<?php echo $id; ?>">></p>
-          <h4 id="<?php echo $id; ?>"></h4>
+          <h4 id="<?php echo $id; ?>"><?php the_sub_field('eud_courseTitle'); ?></h4>
         </div>
         <div class="x-menu hidden" data-row="<?php echo $id; ?>">
-          <p></p>
+          <p><?php the_sub_field('eud_courseText'); ?></p>
         </div>
       </div>
+    <?php endwhile;
+          endif; ?>
     </div>
     <div class="col-xs-12 col-md-5">
       <div class="qotation">
-        <p></p>
-        <small></small>
+      <?php if( have_rows('eud_student') ):
+            while ( have_rows('eud_student') ) : the_row(); ?>
+        <p><?php the_sub_field('eud_studentQuotation'); ?></p>
+        <small><?php the_sub_field('eud_studenName'); ?></small>
+      <?php endwhile;
+            endif;?>
       </div>
     </div>
   </div> <!-- end row -->
   <div class="row">
     <div class="col-xs-12 col-md-7">
-      <h2></h2>
-      <p></p>
+      <h2><?php the_field('eud_market'); ?></h2>
+      <p><?php the_field('eud_marketText') ?></p>
     </div>
     <div class="col-xs-12 col-md-5">
-      <h2>Kontakt</h2>
-      <p><strong></strong>
-        <br>Tel:
-        <br></p>
-        <h4>Reception</h4>
-        <p>Tel: </p>
+      <h2><?php the_field('eud_contact'); ?></h2>
+      <?php if( have_rows('edu_contactInfo') ):
+            while ( have_rows('edu_contactInfo') ) : the_row(); ?>
+      <p><strong><?php the_sub_field('eud_contactName'); ?></strong>
+        <br>Tel:<?php the_sub_field('eud_contactPhone'); ?>
+        <br><?php the_sub_field('eud_contactEmail'); ?></p>
+      <?php endwhile;
+            endif;?>
       </div>
     </div> <!-- end row -->
     <div class="row">
