@@ -9,8 +9,6 @@
   <?php wp_head(); ?>
 </head>
 <body>
-  <div class="container">
-
     <div data-row="1" class="sub-menu">
       <div class="row">
         <div class="col-xs-12 col-md-9">
@@ -38,7 +36,7 @@
         <div class="container-fluid full">
           <nav>
             <div class="logo">
-              <a href="<?php echo site_url(); ?>"><img src="/themes/yrgo/assets/logos/logo_vit2x.png" alt=""></a>
+              <a href="<?php echo site_url(); ?>"><img src="/wp-content/themes/yrgo/assets/logos/logo_vit2x.png" alt=""></a>
             </div>
             <div class="wrapper">
               <?php $id = 0;

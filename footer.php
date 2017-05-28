@@ -1,4 +1,4 @@
-</div><!-- /container -->
+<!-- </div><!-- /container --> 
     </div><!-- /container -->
     <footer>
         <div class="footer_background mt-5 pb-5">
@@ -41,17 +41,17 @@
                     <p class="mb-1 mb-xl-2">Sociala medier</p>
                     <div class="social_media_icons col mt-0 pr-md-0 d-flex justify-content-center justify-content-md-end">
                         <div class="facebook pt-1 pr-3">
-                            <img src="/themes/yrgo/assets/icons/facebook.svg" alt="facebook logo">
+                            <img src="/wp-content/themes/yrgo/assets/icons/facebook.svg" alt="facebook logo">
                         </div>
                         <div class="instagram">
-                            <img class="mr-0" src="/themes/yrgo/assets/icons/instagram.svg" alt="instagram logo">
+                            <img class="mr-0" src="/wp-content/themes/yrgo/assets/icons/instagram.svg" alt="instagram logo">
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="yrgo_footer_logo d-flex justify-content-center pt-5">
-                <img src="/themes/yrgo/assets/icons/yrgologo.png" alt="Yrgo logo">
+                <img src="/wp-content/themes/yrgo/assets/icons/yrgologo.png" alt="Yrgo logo">
             </div>
 
         </div>

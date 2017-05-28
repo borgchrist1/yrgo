@@ -1,17 +1,23 @@
-<?php get_header(); ?>
-<div data-img="<?php echo $var; ?>" class="col-xs-12 course-jumbo">
+<?php get_header();
+// print '<pre>';
+  ?>
+  <?php if (have_posts()) : ?>
+
+      <?php while (have_posts()): the_post(); ?>
+
+<div class="col-xs-12 course-jumbo" style="background: url('<?php the_field('eud_background'); ?>'); background-size: cover;">
   <span class="jumbo-top"></span>
   <div class="jumbo-content">
-    <h1></h1>
-    <h2 class="jumbo-h2"><br></h2>
+    <h1><?php the_field('eud_title'); ?></h1>
+    <h2 class="jumbo-h2"><?php the_field('eud_type'); ?><br><?php the_field('eud_years'); ?></h2>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-7">
-      <h2></h2>
-      <p></p>
+      <h2><?php the_field('eud_about'); ?></h2>
+      <p><?php the_field('eud_aboutText'); ?></p>
     </div>
     <div class="col-xs-12 col-md-5 contact">
       <h2></h2>
@@ -79,5 +85,9 @@
         </dl>
     </div> <!-- end row -->
   </div>
+</div>
 
+            <?php endwhile; ?>
+
+        <?php endif; ?>
 <?php get_footer(); ?>
