@@ -33,17 +33,14 @@
     font-style: normal;
 }
 
-
-footer {
-  padding-top: 100px;
-}
-
 footer p {
-  color: white;
+    color: white;
 }
 
 .footer_background {
     background-color: #001a52;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .kontakt p {
@@ -84,7 +81,7 @@ footer p {
 
 @media (min-width: 576px) {
     .address p {
-      font-size: 0.8rem;
+        font-size: 0.8rem;
         text-align: left;
     }
 }
@@ -106,11 +103,9 @@ footer p {
 }
 
 @media (max-width: 576px) {
-  .lardomsgatan,
-  .styrmansgatan,
-  .skanegatan {
-    padding-top: 20px;
-  }
+    .lardomsgatan, .styrmansgatan, .skanegatan {
+        padding-top: 20px;
+    }
 }
 
 .zipcode p {
@@ -121,7 +116,7 @@ footer p {
 
 @media (min-width: 576px) {
     .address p {
-      font-size: 0.8rem;
+        font-size: 0.8rem;
     }
 }
 
