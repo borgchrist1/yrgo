@@ -34,6 +34,10 @@
 }
 
 
+footer {
+  padding-top: 100px;
+}
+
 footer p {
   color: white;
 }
@@ -44,7 +48,7 @@ footer p {
 
 .kontakt p {
     font-family: GravurLight;
-    font-size: 1.7rem;
+    font-size: 3rem;
     text-align: center;
     padding-top: 33px;
 }
@@ -72,14 +76,15 @@ footer p {
 }
 
 .address p {
-    font-family: GravurThin;
-    font-size: 0.8rem;
+    font-family: GravurLight;
+    font-size: 1.5rem;
     letter-spacing: 0.2px;
     margin-bottom: 10px;
 }
 
 @media (min-width: 576px) {
     .address p {
+      font-size: 0.8rem;
         text-align: left;
     }
 }
@@ -100,10 +105,24 @@ footer p {
     }
 }
 
+@media (max-width: 576px) {
+  .lardomsgatan,
+  .styrmansgatan,
+  .skanegatan {
+    padding-top: 20px;
+  }
+}
+
 .zipcode p {
-    font-family: GravurThin;
-    font-size: 0.7rem;
+    font-family: GravurLight;
+    font-size: 1.3rem;
     line-height: 1.2;
+}
+
+@media (min-width: 576px) {
+    .address p {
+      font-size: 0.8rem;
+    }
 }
 
 @media (min-width: 768px) {
@@ -123,7 +142,7 @@ footer p {
 
 .social_media p {
     font-family: GravurLight;
-    font-size: 1.7rem;
+    font-size: 3rem;
     text-align: center;
     padding-top: 33px;
 }
