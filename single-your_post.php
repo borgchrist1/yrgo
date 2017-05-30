@@ -12,16 +12,15 @@
           </div>
       </div>
 
-      <div class="container">
-
+      <div class="container zeropadding">
           <div class="row">
 
-              <div class="col-xs-12 col-md-7">
+              <div class="col-xs-12 col-md-7 columnpadding">
                   <h2><?php the_field('eud_about'); ?></h2>
                   <p><?php the_field('eud_aboutText'); ?></p>
               </div>
 
-              <div class="col-xs-12 col-md-5 contact">
+              <div class="col-xs-12 col-md-5 columnpadding contact">
                   <h2><?php the_field('eud_fact'); ?></h2>
                       <dl class="dl-horizontal info-list">
                           <?php if( have_rows('eud_aboutContent') ): ?>
@@ -41,7 +40,7 @@
 
           <div class="row">
 
-              <div class="col-xs-12 col-md-7"> <!-- Left column-->
+              <div class="col-xs-12 col-md-7 columnpadding"> <!-- Left column-->
                   <h2><?php the_field('eud_courses'); ?></h2>
                   <?php $id = 0; ?>
                   <?php if( have_rows('eud_courseInfo') ): ?>
@@ -59,28 +58,35 @@
                       <?php endwhile; ?>
                   <?php endif; ?>
               </div>
+              <div class="col-xs-12 col-md-5 columnpadding">
+                <h2><?php the_field('eud_portfolio'); ?></h2>
 
-              <div class="col-xs-12 col-md-5">
-                  <div class="qotation">
-                      <?php if( have_rows('eud_student') ): ?>
-                          <?php while ( have_rows('eud_student') ) : the_row(); ?>
-                              <p><?php the_sub_field('eud_studentQuotation'); ?></p>
-                              <small><?php the_sub_field('eud_studenName'); ?></small>
-                          <?php endwhile; ?>
-                      <?php endif;?>
-                  </div>
+                <?php if( have_rows('eud_portfolioList') ): ?>
+                    <?php while ( have_rows('eud_portfolioList') ) : the_row(); ?>
+                        <?php $id++;?>
+                        <div class="menu" data-row="<?php echo $id; ?>">
+                            <div class="menu-link">
+                                <p class="arrow" data-row="<?php echo $id; ?>">></p>
+                                <h4 id="<?php echo $id; ?>"><?php the_sub_field('eud_portfolioName'); ?></h4>
+                            </div>
+                            <div class="x-menu hidden" data-row="<?php echo $id; ?>">
+                            <p><?php the_sub_field('eud_portfolioLink'); ?></p>
+                           </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
               </div>
 
           </div> <!-- end row -->
 
           <div class="row">
 
-              <div class="col-xs-12 col-md-7">
+              <div class="col-xs-12 col-md-7 columnpadding">
                   <h2><?php the_field('eud_market'); ?></h2>
                   <p><?php the_field('eud_marketText') ?></p>
               </div>
 
-              <div class="col-xs-12 col-md-5">
+              <div class="col-xs-12 col-md-5 columnpadding">
                   <h2><?php the_field('eud_contact'); ?></h2>
                   <?php if( have_rows('edu_contactInfo') ): ?>
                       <?php while ( have_rows('edu_contactInfo') ) : the_row(); ?>
@@ -95,7 +101,7 @@
 
           <div class="row">
 
-              <div class="col-xs-12 col-md-7"> <!-- Left column-->
+              <div class="col-xs-12 col-md-7 columnpadding"> <!-- Left column-->
                   <h2><?php the_field('eud_apply'); ?></h2>
                   <?php if( have_rows('eud_applyInfo') ): ?>
                       <?php while ( have_rows('eud_applyInfo') ) : the_row(); ?>
@@ -113,7 +119,7 @@
                   <?php endif; ?>
               </div>
 
-              <div class="col-xs-12 col-md-5 contact">
+              <div class="col-xs-12 col-md-5 columnpadding contact">
                   <h2><?php the_field('eud_partners'); ?></h2>
                       <dl class="dl-horizontal info-list">
                           <?php if( have_rows('eud_patnersList') ): ?>
@@ -123,33 +129,22 @@
                           <?php endif; ?>
                       </dl>
               </div>
+              <div class="col-xs-12 col-md-5 columnpadding">
+
+
+                  <div class="qotation">
+                      <?php if( have_rows('eud_student') ): ?>
+                          <?php while ( have_rows('eud_student') ) : the_row(); ?>
+                            <img src="<?php the_sub_field('eud_studentPic'); ?>" alt="">
+                              <p><?php the_sub_field('eud_studentQuotation'); ?></p>
+                              <small><?php the_sub_field('eud_studenName'); ?></small>
+                          <?php endwhile; ?>
+                      <?php endif;?>
+                  </div>
+              </div>
 
           </div> <!-- end row -->
 
-          <div class="row">
-            <div class="col-12 similar_courses">
-              <h2>Relaterade utbildningar</h2>
-              <div class="similar_course_thumbs">
-                <?php if( have_rows('....') ): ?>
-                    <?php while ( have_rows('....') ) : the_row(); ?>
-                        <?php $id++;?>
-                        <div class="course_thumb" data-row="<?php echo $id; ?>">
-                            <div class="course_thumb_link col">
-                                <img class="course_thumb_img" src="" alt="programbild" id="<?php echo $id; ?>"><?php the_sub_field(' program namn '); ?>>
-                                <h4 id="<?php echo $id; ?>"><?php the_sub_field('eud_courseTitle'); ?></h4>
-                                <p id="<?php echo $id; ?>"><?php the_sub_field(' program poäng '); ?></p>
-                                <p class="arrow" data-row="<?php echo $id; ?>">-s></p>
-                            </div>
-                        </div>
-                    <?php endwhile; ?>
-                <?php endif; ?>
-              </div>
-              <div class="similar_courses_sublinks d-flex justify-content-between">
-                <h5>Tillbaka till alla utbildningar</h5>
-                <h5>Visa fler relaterade utbildningar</h5>
-              </div>
-            </div>
-          </div>
 
       </div>
 

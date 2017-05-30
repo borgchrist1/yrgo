@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <div class="container">
+        <div class="container zeropadding">
             <div class="row">
 
                 <div class="col-xs-12 col-md-7">

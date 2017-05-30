@@ -9,54 +9,61 @@
   <?php wp_head(); ?>
 </head>
 <body>
-    <div data-row="1" class="sub-menu">
-      <div class="row">
-        <div class="col-xs-12 col-md-9">
-          <div class="menu-list">
-            <ul>
-              <li><h2>Test</h2></li>
-              <li><h2>Test</h2></li>
-              <li><h2>Test</h2></li>
-              <li><h2>Test</h2></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-3">
-          <div class="menu-content">
-            <ul>
-              <li><h4>test</h4></li>
-              <li><h4>test</h4></li>
-              <li><h4>test</h4></li>
-            </ul>
-          </div>
-        </div>
 
-      </div>
+
+
+  <div data-row="1" class="sub-menu">
+<div class="row">
+    <div class="col-xs-12 col-md-9">
+      <div class="menu-list" style="padding-top: 30px;">
+    <ul>
+      <li><h2>BAGERI OCH HOTELL</h2></li>
+      <li><h2>BYGGTEKNIK OCH SAMHÄLLSUPPBYGGNAD</h2></li>
+      <li><h2>MEDIA OCH KOMMUNIKATION</h2></li>
+      <li><h2>BESÖKSNÄRING OCH HOTELL</h2></li>
+      <li><h2>EKONOMI OCH ADMNINISTRATION</h2></li>
+      <li><h2>TEKNIK OCH IT</h2></li>
+      <li><h2>VÅRD OCH OMSORG</h2></li>
+      <li><h2>TRANSPORT</h2></li>
+    </ul>
+  </div>
+  </div>
+  <div class="col-xs-12 col-md-3">
+    <div class="menu-content">
+      <ul>
+        <li><h4>test</h4></li>
+        <li><h4>test</h4></li>
+        <li><h4>test</h4></li>
+      </ul>
     </div>
-        <div class="container-fluid full">
-          <nav>
-            <div class="logo">
-              <a href="<?php echo site_url(); ?>"><img src="/wp-content/themes/yrgo/assets/logos/logo_vit2x.png" alt=""></a>
-            </div>
-          
-            <div class="wrapper">
+  </div>
 
-
-              <?php $id = 0;
-              foreach (get_pages() as $page):
-              $id++; ?>
-            <p id="<?php echo $id; ?>" class="parent"><?php echo $page->post_title; ?></p>
-          <?php endforeach; ?>
-        </div>
-
+    </div>
+  </div>
+  <div data-row="2" class="sub-menu">
+    <ul>
+      <li><h2><a href="http://themes.dev/?contact=lindholmen">LÄRDOMSGATAN</a></h2></li>
+      <li><h2>MOLINSGATAN</h2></li>
+      <li><h2>SKÅNEGATAN</h2></li>
+      <li><h2>STYRMANSGATAN</h2></li>
+    </ul>
+  </div>
+  <div data-row="4" class="sub-menu">
+    <ul>
+      <li>4Hello</li>
+      <li>World</li>
+      <li>!!!</li>
+    </ul>
+  </div>
+  <div class="container-fluid full">
+    <nav>
+      <div class="logo">
+        <img src="/wp-content/themes/yrgo/assets/logos/logo_vit2x.png" alt="">
       </div>
-      </nav>
-      <script>
-        let hamburger = document.querySelector('.hamburger');
-        hamburger.addEventListener('click', (event) => {
-          let bb = document.querySelector('.bb');
-          let nav = document.querySelector('nav');
-          bb.className += " display center";
-          nav.className += ' hh';
-        });
-      </script>
+      <div class="wrapper">
+      <p id="1" class="parent">Utbildningar</p>
+      <p id="2" class="parent">Kontakt</p>
+      <p id="3" class="parent">Om oss</p>
+      <p id="4" class="parent">Något</p>
+    </div>
+    </nav>

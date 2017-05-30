@@ -56,7 +56,9 @@
 
         </div>
     </footer>
+    <script src="/wp-content/themes/yrgo/js/main.js">
 
+    </script>
     <?php wp_footer(); ?>
 </body>
 </html>
