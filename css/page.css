@@ -1,0 +1,177 @@
+body {
+    font-family: GravurLight;
+    color: white;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.headline {
+    font-family: GravurRegular;
+    font-size: 2.1rem;
+    text-align: center;
+    line-height: 0.9;
+    color: white;
+}
+
+@media (min-width: 576px) {
+    .headline {
+        font-size: 3.7rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .headline {
+        font-size: 6.25rem;
+        text-align: left;
+        padding-top: 125px;
+        padding-left: 78px;
+    }
+}
+
+.header_teaxtarea p {
+    font-size: 0.75rem;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: white;
+    padding-top: 12px;
+}
+
+@media (min-width: 768px) {
+    .header_teaxtarea p {
+        max-width: 470px;
+        font-size: 0.9375rem;
+        letter-spacing: 0.35px;
+        line-height: 1.5;
+        text-align: left;
+        padding-top: 2px;
+        padding-bottom: 17px;
+        margin-left: 68px;
+    }
+}
+
+.courses_button {
+    width: 198px;
+    height: 53px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    box-shadow: 5px 10px 10px 0 rgba(0, 0, 0, 0.3);
+    margin: 30px auto;
+}
+
+@media (min-width: 768px) {
+    .courses_button {
+        margin-left: 83px;
+        margin-bottom: 64px;
+    }
+}
+
+.courses_button p {
+    font-family: GravurRegular;
+    font-size: 1rem;
+    color: #f52a3b;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.courses_button a {
+    text-decoration: none;
+}
+
+.arrow_down {
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+.white_background {
+    background-color: white;
+    margin-top: 35px;
+}
+
+@media (min-width: 576px) {
+    .white_background {
+        margin-top: 60px;
+    }
+}
+
+.welcome p {
+    font-family: GravurBold;
+    font-size: 2rem;
+    color: #f52a3b;
+    text-align: center;
+}
+
+@media (min-width: 576px) {
+    .welcome p {
+        font-size: 3.7rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .welcome p {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+}
+
+.welcome_text p {
+    font-family: GravurRegular;
+    letter-spacing: 0.5px;
+    font-size: 0.75rem;
+    color: black;
+    text-align: center;
+}
+
+@media (min-width: 576px) {
+    .welcome_text p {
+        font-family: GravurLight;
+        letter-spacing: 0.3px;
+        line-height: 1.6;
+        color: #6e6e6e;
+    }
+}
+
+@media (min-width: 768px) {
+    .welcome_text p {
+        font-size: 1.1875rem;
+        letter-spacing: 0.3px;
+        line-height: 1.6;
+    }
+}
+
+@media (min-width: 992px) {
+    .welcome_text p {
+        text-align: left;
+        max-width: 480px;
+    }
+}
+
+.why_yrgo p {
+    font-family: GravurBold;
+    font-size: 2rem;
+    color: #f52a3b;
+    text-align: center;
+    padding-top: 25px;
+}
+
+@media (min-width: 576px) {
+    .why_yrgo p {
+        font-size: 3.7rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .why_yrgo p {
+        font-size: 2.5rem;
+        text-align: left;
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 576px) {
+    .yrgo_video {
+        margin-bottom: 80px;
+    }
+}
