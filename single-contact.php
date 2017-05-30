@@ -7,8 +7,8 @@
         <div class="col-xs-12 course-jumbo" style="background: url('<?php the_field('eud_background'); ?>'); background-size: cover;">
             <span class="jumbo-top"></span>
             <div class="jumbo-content">
-                <h1><?php the_field('eud_title'); ?></h1>
-                <h2 class="jumbo-h2"><?php the_field('eud_type'); ?><br><?php the_field('eud_years'); ?></h2>
+                <h1><?php the_field('kontact_title'); ?></h1>
+                <h2 class="jumbo-h2"><?php the_field('contact_subTitle'); ?><br><?php the_field('eud_years'); ?></h2>
             </div>
         </div>
 
