@@ -9,5 +9,4 @@
         <p>You're lost and confused. This page doesn't exist. Perhaps you want to <a href="<?php bloginfo('url'); ?>">visit our startpage</a>?</p>
     </div><!-- /col -->
 </div><!-- /row -->
-
 <?php get_footer(); ?>

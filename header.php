@@ -38,11 +38,25 @@
             <div class="logo">
               <a href="<?php echo site_url(); ?>"><img src="/wp-content/themes/yrgo/assets/logos/logo_vit2x.png" alt=""></a>
             </div>
+          
             <div class="wrapper">
+
+
               <?php $id = 0;
               foreach (get_pages() as $page):
               $id++; ?>
             <p id="<?php echo $id; ?>" class="parent"><?php echo $page->post_title; ?></p>
           <?php endforeach; ?>
         </div>
+
+      </div>
       </nav>
+      <script>
+        let hamburger = document.querySelector('.hamburger');
+        hamburger.addEventListener('click', (event) => {
+          let bb = document.querySelector('.bb');
+          let nav = document.querySelector('nav');
+          bb.className += " display center";
+          nav.className += ' hh';
+        });
+      </script>

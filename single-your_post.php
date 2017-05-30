@@ -15,7 +15,29 @@
       <div class="container">
 
           <div class="row">
+            <div class="">
+  <?php
 
+$parent_cat_arg = array('hide_empty' => false, 'parent' => 0 );
+$parent_cat = get_terms('category',$parent_cat_arg);//category name
+
+foreach ($parent_cat as $catVal) {
+
+    echo '<h2>'.$catVal->name.'</h2>'; //Parent Category
+
+    $child_arg = array( 'hide_empty' => false, 'parent' => $catVal->term_id );
+    $child_cat = get_terms( 'category', $child_arg );
+
+    echo '<ul>';
+        foreach( $child_cat as $child_term ) {
+            echo '<li>'.$child_term->name . '</li>'; //Child Category
+        }
+    echo '</ul>';
+
+}
+?>
+
+            </div>
               <div class="col-xs-12 col-md-7">
                   <h2><?php the_field('eud_about'); ?></h2>
                   <p><?php the_field('eud_aboutText'); ?></p>
@@ -114,10 +136,14 @@
               </div>
 
               <div class="col-xs-12 col-md-5 contact">
-                  <h2></h2>
-                  <dl class="dl-horizontal info-list">
-                      <dt></dt>
-                  </dl>
+                  <h2><?php the_field('eud_partners'); ?></h2>
+                      <dl class="dl-horizontal info-list">
+                          <?php if( have_rows('eud_patnersList') ): ?>
+                              <?php while ( have_rows('eud_patnersList') ) : the_row(); ?>
+                                  <dt><?php the_sub_field('eud_patnersListText'); ?></dt>
+                              <?php endwhile; ?>
+                          <?php endif; ?>
+                      </dl>
               </div>
 
           </div> <!-- end row -->
