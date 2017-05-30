@@ -15,6 +15,7 @@
       <div class="container">
 
           <div class="row">
+
               <div class="col-xs-12 col-md-7">
                   <h2><?php the_field('eud_about'); ?></h2>
                   <p><?php the_field('eud_aboutText'); ?></p>
