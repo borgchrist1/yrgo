@@ -24,6 +24,7 @@ h3 {
 
 h4 {
   font-size: 18px;
+  color: black;
 }
 
 p {
@@ -283,7 +284,34 @@ font-size: 20px;
 
   }
 
-  #map {
-    height: 250px;
-        width: 250px;
+  .map {
+    margin: 0 auto;
   }
+
+  #map {
+
+    height: 300px;
+    width: 700px;
+  }
+
+  @media screen and (max-width: 950px) {
+    #map {
+      height: 300px;
+        width: 600px;
+  }
+}
+
+  @media screen and (max-width: 768px) {
+    #map {
+      height: 300px;
+        width: 400px;
+  }
+}
+
+
+@media screen and (max-width: 468px) {
+  #map {
+    height: 300px;
+      width: 300px;
+}
+}
