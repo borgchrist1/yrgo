@@ -15,29 +15,6 @@
       <div class="container">
 
           <div class="row">
-            <div class="">
-  <?php
-
-$parent_cat_arg = array('hide_empty' => false, 'parent' => 0 );
-$parent_cat = get_terms('category',$parent_cat_arg);//category name
-
-foreach ($parent_cat as $catVal) {
-
-    echo '<h2>'.$catVal->name.'</h2>'; //Parent Category
-
-    $child_arg = array( 'hide_empty' => false, 'parent' => $catVal->term_id );
-    $child_cat = get_terms( 'category', $child_arg );
-
-    echo '<ul>';
-        foreach( $child_cat as $child_term ) {
-            echo '<li>'.$child_term->name . '</li>'; //Child Category
-        }
-    echo '</ul>';
-
-}
-?>
-
-            </div>
               <div class="col-xs-12 col-md-7">
                   <h2><?php the_field('eud_about'); ?></h2>
                   <p><?php the_field('eud_aboutText'); ?></p>
@@ -147,6 +124,31 @@ foreach ($parent_cat as $catVal) {
               </div>
 
           </div> <!-- end row -->
+
+          <div class="row">
+            <div class="col-12 similar_courses">
+              <h2>Relaterade utbildningar</h2>
+              <div class="similar_course_thumbs">
+                <?php if( have_rows('....') ): ?>
+                    <?php while ( have_rows('....') ) : the_row(); ?>
+                        <?php $id++;?>
+                        <div class="course_thumb" data-row="<?php echo $id; ?>">
+                            <div class="course_thumb_link col">
+                                <img class="course_thumb_img" src="" alt="programbild" id="<?php echo $id; ?>"><?php the_sub_field(' program namn '); ?>>
+                                <h4 id="<?php echo $id; ?>"><?php the_sub_field('eud_courseTitle'); ?></h4>
+                                <p id="<?php echo $id; ?>"><?php the_sub_field(' program poäng '); ?></p>
+                                <p class="arrow" data-row="<?php echo $id; ?>">-s></p>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+              </div>
+              <div class="similar_courses_sublinks d-flex justify-content-between">
+                <h5>Tillbaka till alla utbildningar</h5>
+                <h5>Visa fler relaterade utbildningar</h5>
+              </div>
+            </div>
+          </div>
 
       </div>
 
